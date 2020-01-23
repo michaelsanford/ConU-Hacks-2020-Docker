@@ -1,0 +1,10 @@
+version: "3.7"
+services:
+    ProjectA:
+        image: project-a:latest
+        ports: 
+            - 8080:8080
+    ProjectB:
+        image: project-b:latest
+        ports: 
+            - 8081:8081
