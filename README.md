@@ -9,9 +9,10 @@ Michael Sanford
 
 1. Install Docker
 2. Run `build.ps1`
+3. ...that's it...
 
-That's kind of the point...
+To quit, <kbd>Ctrl + C</kbd> and wait for the stack to exit gracefully.
 
 ### Slides
 
-Here are the slides: <link>
+Here are the slides: https://docs.google.com/presentation/d/10TfB8PTp50rpvloXovdd4n4fAMhNrqYhmLqllwr-Pe8/
