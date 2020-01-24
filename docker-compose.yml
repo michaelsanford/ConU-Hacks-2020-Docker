@@ -3,17 +3,18 @@ services:
     ProjectA:
         image: project-a:latest
         restart: always
+        depends_on: MariaDB
         ports: 
             - 8080:8080
     ProjectB:
         image: project-b:latest
-        restart: always
+        restart: on-failure
         depends_on: MariaDB
         ports: 
             - 8081:8081
     MariaDB:
         image: mariadb:10.4.11-bionic
-        restart: always
+        restart: on-failure
         environment: 
             MYSQL_ROOT_PASSWORD: "root"
         ports:
