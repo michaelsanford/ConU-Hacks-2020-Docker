@@ -3,13 +3,16 @@ services:
     ProjectA:
         image: project-a:latest
         restart: always
-        depends_on: MariaDB
+        depends_on:
+            - MariaDB
         ports: 
             - 8080:8080
     ProjectB:
         image: project-b:latest
         restart: on-failure
-        depends_on: MariaDB
+        depends_on:
+            - MariaDB
+            - ProjectA
         ports: 
             - 8081:8081
     MariaDB:
