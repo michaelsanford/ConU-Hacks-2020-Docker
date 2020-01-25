@@ -5,7 +5,9 @@ services:
         restart: always
         depends_on:
             - MariaDB
-        ports: 
+        links: 
+            - MariaDB
+        ports:
             - 8080:8080
     ProjectB:
         image: project-b:latest
@@ -13,7 +15,9 @@ services:
         depends_on:
             - MariaDB
             - ProjectA
-        ports: 
+        links: 
+            - MariaDB
+        ports:
             - 8081:8081
     MariaDB:
         image: mariadb:10.4.11-bionic
